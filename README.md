@@ -23,7 +23,7 @@ pacman -S stow
 First, check out the dotfiles repo in your $HOME directory using git
 
 ```
-$ git clone https://github.com/DeXoteric/dotfiles.git
+$ git clone git@github.com:DeXoteric/dotfiles.git
 $ cd dotfiles
 ```
 
