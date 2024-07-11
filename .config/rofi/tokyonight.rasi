@@ -5,17 +5,17 @@
 
 // define colors etc.
 * {
-    bg: #24283b;
+    bg: #1a1b26;
     hv: #9274ca; 
     primary: #C5C8C6; 
     ug: #0B2447;
-    font: "CaskaydiaMono Nerd Font 11";
+    font: "CaskaydiaMono Nerd Font 12";
     background-color: @bg;
     //dark: @bg;
     border: 0px;
     kl: #7aa2f7;
     black: #000000;
-
+    orange: #ff9e64;
     transparent: rgba(46,52,64,0);
 }
 
@@ -95,7 +95,7 @@ element-text {
 
 element selected.normal {
     color: @black;
-    background-color: @hv;
+    background-color: @orange;
 }
 
 element normal active {

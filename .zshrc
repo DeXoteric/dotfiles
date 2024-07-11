@@ -26,6 +26,7 @@ autoload -U compinit && compinit
 bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
+bindkey "^[[3~" delete-char
 
 # History
 HISTSIZE=5000
@@ -51,6 +52,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias ls='ls --color'
 alias vim='nvim'
 alias c='clear'
+alias q='exit'
 
 # Shell integrations
 eval "$(fzf --zsh)"

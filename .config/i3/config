@@ -205,7 +205,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Color theme
-client.focused           #9aa5ce #364A82 #c0caf5 #9aa5ce   #9aa5ce
+# class                  border  backgr. text    indicator child_border
+client.focused           #ff9e64 #364A82 #c0caf5 #ff9e64   #ff9e64
 client.focused_inactive  #16161d #16161d #c0caf5 #16161d   #16161d
 client.unfocused         #16161d #16161d #c0caf5 #16161d   #16161d
 
