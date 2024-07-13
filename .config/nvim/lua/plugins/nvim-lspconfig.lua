@@ -47,13 +47,13 @@ return {
       ensure_installed = {
         'black',
         'debugpy',
-        'flake8',
+        -- 'flake8',
         'isort',
-        'mypy',
+        -- 'mypy',
         'pylint',
       },
     })
-    
+
     vim.api.nvim_command('MasonToolsInstall')
 
     local lspconfig = require('lspconfig')

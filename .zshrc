@@ -53,6 +53,7 @@ alias ls='ls --color'
 alias vim='nvim'
 alias c='clear'
 alias q='exit'
+alias neofetch='neofetch | lolcat'
 
 # Shell integrations
 eval "$(fzf --zsh)"
