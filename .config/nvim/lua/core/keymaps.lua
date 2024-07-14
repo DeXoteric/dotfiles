@@ -61,6 +61,10 @@ keymap.set('n', '<leader>fm', function() require('telescope.builtin').treesitter
 -- Git-blame
 keymap.set("n", "<leader>gb", ":GitBlameToggle<CR>") -- toggle git blame
 
+-- ToggleTerm
+keymap.set('t', '<esc>', [[<C-\><C-n>]])
+keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]])
+
 -- Harpoon
 keymap.set("n", "<leader>ha", require("harpoon.mark").add_file)
 keymap.set("n", "<leader>hh", require("harpoon.ui").toggle_quick_menu)
