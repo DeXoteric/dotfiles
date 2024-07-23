@@ -27,8 +27,15 @@ grey = "#6c6c6c"
 	type = 'prompt'
 	alignment = 'left'
 	newline = true
+  
+  [[blocks.segments]]
+    type = 'python'
+    style = 'plain'
+    background = 'transparent'
+    foreground = 'p:terminal-yellow'
+    template = "  "
 
-	[[blocks.segments]]
+  [[blocks.segments]]
 		type = 'path'
 		style = 'plain'
 		background = 'transparent'
