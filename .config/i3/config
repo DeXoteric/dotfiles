@@ -177,7 +177,7 @@ hide_edge_borders none
 default_floating_border pixel 2
 # smart_borders on
 
-gaps inner 20 
+gaps inner 10 
 
 
 # resize window (you can also use the mouse for that)
