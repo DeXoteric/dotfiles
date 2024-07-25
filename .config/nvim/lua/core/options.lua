@@ -4,15 +4,15 @@ local opt = vim.opt
 opt.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 -- Line Numbers
-opt.relativenumber = false
+opt.relativenumber = true
 opt.number = true
 
 -- Tabs & Indentation
 opt.tabstop = 2
+opt.softtabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
-vim.bo.softtabstop = 2
 
 -- Line Wrapping
 opt.wrap = false
@@ -31,6 +31,10 @@ opt.signcolumn = "yes"
 vim.diagnostic.config {
   float = { border = "rounded" }, -- add border to diagnostic popups
 }
+
+-- 
+opt.termguicolors = true
+opt.scrolloff = 8
 
 -- Backspace
 opt.backspace = "indent,eol,start"
