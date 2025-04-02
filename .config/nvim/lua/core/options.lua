@@ -1,59 +1,85 @@
-local opt = vim.opt
-
--- Session Management
-opt.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
-
 -- Line Numbers
-opt.relativenumber = true
-opt.number = true
-
--- Tabs & Indentation
-opt.tabstop = 2
-opt.softtabstop = 2
-opt.shiftwidth = 2
-opt.expandtab = true
-opt.autoindent = true
-
--- Line Wrapping
-opt.wrap = false
-
--- Search Settings
-opt.ignorecase = true
-opt.smartcase = true
-
--- Cursor Line
-opt.cursorline = true
-
--- Appearance
-opt.termguicolors = true
-opt.background = "dark"
-opt.signcolumn = "yes"
-vim.diagnostic.config {
-  float = { border = "rounded" }, -- add border to diagnostic popups
-}
-
--- 
-opt.termguicolors = true
-opt.scrolloff = 8
-
--- Backspace
-opt.backspace = "indent,eol,start"
+vim.opt.number = true -- Show absolute line numbers
+vim.opt.relativenumber = true -- Show relative line numbers
 
 -- Clipboard
-opt.clipboard:append("unnamedplus")
+vim.o.clipboard = "unnamedplus" -- Use system clipboard
 
--- Split Windows
-opt.splitright = true
-opt.splitbelow = true
+-- Line Wrapping
+vim.opt.wrap = true -- Enable line wrapping
+vim.opt.linebreak = true -- Break lines at word boundaries
+vim.opt.breakindent = true -- Preserve indentation for wrapped lines
+vim.opt.breakindentopt = "shift:4" -- Indent wrapped lines by 4 spaces more than the original line
 
--- Consider - as part of keyword
-opt.iskeyword:append("-")
+-- Mouse Support
+vim.o.mouse = "a" -- Enable mouse support in all modes
 
--- Disable the mouse while in nvim
-opt.mouse = ""
+-- Indentation
+vim.o.autoindent = true -- Copy indentation from previous line
 
--- Folding
-opt.foldlevel = 20
-opt.foldmethod = "expr"
-opt.foldexpr = "nvim_treesitter#foldexpr()" -- Utilize Treesitter folds
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "lua,javascript,typescript,html,css,json,yaml",
+	callback = function()
+		vim.o.shiftwidth = 2
+		vim.o.tabstop = 2
+		vim.o.softtabstop = 2
+		vim.o.expandtab = true -- Use spaces instead of tabs
+	end,
+})
 
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "python,rust",
+	callback = function()
+		vim.o.shiftwidth = 4
+		vim.o.tabstop = 4
+		vim.o.softtabstop = 4
+		vim.o.expandtab = true
+	end,
+})
+
+-- Go and Makefile should use hard tabs
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "go,make",
+	callback = function()
+		vim.o.shiftwidth = 4
+		vim.o.tabstop = 4
+		vim.o.softtabstop = 4
+		vim.o.expandtab = false -- Use tabs instead of spaces
+	end,
+})
+
+-- Search Settings
+vim.o.ignorecase = true -- Case-insensitive search
+vim.o.smartcase = true -- Case-sensitive if search includes uppercase
+
+-- Scrolling
+vim.opt.scrolloff = 8 -- Keep 8 lines visible above/below cursor
+vim.opt.sidescrolloff = 8 -- Keep 8 columns visible left/right of cursor
+
+-- Backspace Behavior
+vim.o.backspace = "indent,eol,start" -- Allow backspacing over indentations, line breaks, and start of insert mode
+
+-- Split Window Behavior
+vim.o.splitright = true -- Open vertical splits to the right
+vim.o.splitbelow = true -- Open horizontal splits below
+
+-- Appearance
+vim.o.termguicolors = true -- Enable 24-bit colors
+vim.o.cursorline = true -- Highlight the cursor line
+vim.o.showtabline = 2 -- Always show the tabline
+vim.o.fileencoding = "utf-8" -- Set file encoding to UTF-8
+
+-- Keyword Handling
+vim.opt.iskeyword:append("-") -- Treat hyphenated words as a single word
+
+-- Undo & Backup
+vim.o.undofile = true -- Save undo history
+vim.o.backup = false -- Disable backup file creation
+vim.o.writebackup = false -- Prevent editing files opened by another program
+vim.o.swapfile = false -- Disable swap file creation
+
+-- Miscellaneous
+vim.o.signcolumn = "yes" -- Keep sign column always visible
+vim.o.completeopt = "menuone,noselect" -- Improve completion menu behavior
+vim.o.numberwidth = 2 -- Set number column width to 2
+vim.o.showmode = false -- Hide the mode display since the statusline already shows it

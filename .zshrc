@@ -11,7 +11,11 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # OhMyPosh config
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/tokyo-night.toml)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/catppuccin-macchiato.json)"
+
+# Default editor
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -50,11 +54,13 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 alias ls='ls --color'
-alias vim='nvim'
 alias c='clear'
 alias q='exit'
 alias neofetch='neofetch | lolcat'
 
 # Shell integrations
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init --cmd cd zsh)"export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+export PATH=$HOME/go/bin:$PATH

@@ -1,0 +1,134 @@
+{
+  // ─── Formatting ───────────────────────────────────────────────
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": false, // Go uses tabs
+    "editor.rulers": [100]
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.rulers": [80, 88],
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 88
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "adpyke.vscode-sql-formatter",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+
+  // ─── Editor Settings ─────────────────────────────────────────
+  "editor.formatOnSave": true,
+  "editor.cursorBlinking": "solid",
+  "editor.fontFamily": "'CaskaydiaMono Nerd Font', Consolas, 'Courier New', monospace",
+  "editor.fontSize": 16,
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "editor.semanticHighlighting.enabled": true,
+  "editor.wrappingIndent": "indent",
+
+  // ─── UI / Theme ──────────────────────────────────────────────
+  "breadcrumbs.enabled": false,
+  "catppuccin.accentColor": "blue",
+  "catppuccin.italicComments": false,
+  "catppuccin.italicKeywords": false,
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.iconTheme": "catppuccin-macchiato",
+  "workbench.startupEditor": "none",
+  "window.titleBarStyle": "custom",
+  "window.zoomLevel": 1.5,
+
+  // ─── Terminal ────────────────────────────────────────────────
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorWidth": 1,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.minimumContrastRatio": 1,
+
+  // ─── Explorer & Files ────────────────────────────────────────
+  "explorer.confirmDragAndDrop": false,
+  "files.autoSave": "onFocusChange",
+
+  // ─── Git Settings ────────────────────────────────────────────
+  "git.confirmSync": false,
+  "git.openRepositoryInParentFolders": "never",
+
+  // ─── Python & Go LSP ─────────────────────────────────────────
+  "basedpyright.analysis.typeCheckingMode": "standard",
+  "gopls": {
+    "ui.semanticTokens": false
+  },
+  "python.createEnvironment.trigger": "off",
+
+  // ─── Markdown & Diff Editor ──────────────────────────────────
+  "diffEditor.ignoreTrimWhitespace": false,
+  "markdownlint.run": "onSave",
+
+  // ─── Workbench / Tabs ────────────────────────────────────────
+  "workbench.editor.showTabs": "single",
+
+  // ─── Not formatted ────────────────────────────────────────
+  "sql-formatter.dialect": "pl/sql",
+  "editor.tokenColorCustomizations": {
+    "[Catppuccin Macchiato]": {
+      "textMateRules": [
+        {
+          "scope": "constant.other.placeholder.go",
+          "settings": {
+            "foreground": "#8aadf4"
+          }
+        },
+        {
+          "scope": "constant.character.escape.go",
+          "settings": {
+            "foreground": "#c6a0f6"
+          }
+        }
+      ]
+    }
+  },
+
+  "editor.minimap.enabled": false,
+  "catppuccin.bracketMode": "neovim",
+  "chat.commandCenter.enabled": false
+}
