@@ -104,9 +104,6 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "markdownlint.run": "onSave",
 
-  // ─── Workbench / Tabs ────────────────────────────────────────
-  "workbench.editor.showTabs": "single",
-
   // ─── Not formatted ────────────────────────────────────────
   "sql-formatter.dialect": "pl/sql",
   "editor.tokenColorCustomizations": {
@@ -130,5 +127,8 @@
 
   "editor.minimap.enabled": false,
   "catppuccin.bracketMode": "neovim",
-  "chat.commandCenter.enabled": false
+  "chat.commandCenter.enabled": false,
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": ["--fast", "--auto-fix"],
+  "go.lintOnSave": "package"
 }
