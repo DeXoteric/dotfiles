@@ -60,7 +60,10 @@ alias neofetch='neofetch | lolcat'
 
 # Shell integrations
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"export PYENV_ROOT="$HOME/.pyenv"
+eval "$(zoxide init --cmd cd zsh)"
+
+export PATH=$HOME/go/bin:$PATH
+
+export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
-export PATH=$HOME/go/bin:$PATH

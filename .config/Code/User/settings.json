@@ -57,6 +57,11 @@
     "editor.tabSize": 2,
     "editor.insertSpaces": true
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
 
   // ─── Editor Settings ─────────────────────────────────────────
   "editor.formatOnSave": true,
@@ -130,5 +135,6 @@
   "chat.commandCenter.enabled": false,
   "go.lintTool": "golangci-lint",
   "go.lintFlags": ["--fast", "--auto-fix"],
-  "go.lintOnSave": "package"
+  "go.lintOnSave": "package",
+  "makefile.configureOnOpen": false
 }
