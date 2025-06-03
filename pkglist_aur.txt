@@ -1,0 +1,14 @@
+catppuccin-cursors-macchiato
+catppuccin-gtk-theme-macchiato
+jdownloader2
+mkinitcpio-numlock
+neofetch
+oh-my-posh
+pgadmin4-desktop
+pix
+proton-ge-custom-bin
+python-pulsectl-asyncio
+qtile-extras
+ttf-ms-win11-auto
+visual-studio-code-bin
+zen-browser-bin
